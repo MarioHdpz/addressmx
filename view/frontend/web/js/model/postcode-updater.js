@@ -4,7 +4,7 @@
  */
 /*jshint browser:true jquery:true*/
 /*global alert*/
-define(['mageUtils','Pengo_Addressmx/js/checkout-address-updater','Magestore_OneStepCheckout/js/action/showLoader'], function (utils, checkoutUpdater,showLoader) {
+define(['mageUtils','Pengo_Addressmx/js/checkout-address-updater','Magento_Checkout/js/model/full-screen-loader'], function (utils, checkoutUpdater,showLoader) {
     'use strict';
     return {
 
@@ -23,7 +23,7 @@ define(['mageUtils','Pengo_Addressmx/js/checkout-address-updater','Magestore_One
                         }
                     }
                 }
-                showLoader().address(false);
+                Loader().all(false);
                 return false;
             }
             return true;

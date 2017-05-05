@@ -11,7 +11,7 @@ define([
     'jquery',
     'mage/template',
     'mage/url',
-    'Magestore_OneStepCheckout/js/action/showLoader',
+    'Magento_Checkout/js/model/full-screen-loader',
     'jquery/ui',
     'mage/validation',
 ], function ($, mageTemplate, mageUrl, Loader) {

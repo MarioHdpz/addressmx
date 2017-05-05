@@ -20,8 +20,7 @@ define(
         'Magento_Checkout/js/action/set-billing-address',
         'Magento_Ui/js/model/messageList',
         'mage/translate',
-        'Pengo_Addressmx/js/billing-address-updater',
-        'Magestore_OneStepCheckout/js/model/billing-address-state'
+        'Pengo_Addressmx/js/billing-address-updater'
     ],
     function (
         ko,
@@ -39,7 +38,6 @@ define(
         globalMessageList,
         $t,
         billingAddressUpdater,
-        State
     ) {
         'use strict';
 
@@ -65,14 +63,14 @@ define(
                 var self = this;
                 this._super();
                 this.isAddressDetailsVisible(false);
-                this.requireInvoice.subscribe(function (isVisible) {
+                /*this.requireInvoice.subscribe(function (isVisible) {
                     if(isVisible){
                         this.prepareFields();
                         State.sameAsShipping(false);
                     } else {
                         State.sameAsShipping(true);
                     }
-                }, this);
+                }, this);*/
 
                 return this;
             },

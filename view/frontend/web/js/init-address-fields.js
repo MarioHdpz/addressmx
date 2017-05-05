@@ -1,5 +1,5 @@
 /*jshint browser:true expr:true*/
-define(['uiComponent','jquery','Magestore_OneStepCheckout/js/action/showLoader',], function(Component,$,showLoader) {
+define(['uiComponent','jquery','Magento_Checkout/js/model/full-screen-loader',], function(Component,$,Loader) {
 
     return Component.extend({
 
@@ -72,7 +72,7 @@ define(['uiComponent','jquery','Magestore_OneStepCheckout/js/action/showLoader',
                     postcode.on('keyup', function (e) {
                       var val = $(e.target).val();
                       if(val.length == 5){
-                          showLoader().address(true);
+                          Loader().all(true);
                       }
                     });
                 }

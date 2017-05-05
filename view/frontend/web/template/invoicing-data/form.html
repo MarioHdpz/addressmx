@@ -1,0 +1,21 @@
+
+
+<div class="invoicing-data-form" >
+    <form data-hasrequired="* Required Fields">
+        <fieldset id="invoicing-address-form" class="fieldset address">
+            <!-- ko foreach: getRegion('additional-fieldsets') -->
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+            <!-- ko if: (isCustomerLoggedIn && customerHasAddresses) -->
+            <div class="field choice checkbox-group">
+                <input type="checkbox" class="checkbox" id="billing-save-in-address-book" data-bind="checked: saveInAddressBook" />
+                <label class="label label--checkbox" for="billing-save-in-address-book">
+                    <span class="check"></span>
+                    <span class="box-check"></span>
+                    <strong data-bind="i18n: 'Save in address book'"></strong>
+                </label>
+            </div>
+            <!-- /ko -->
+        </fieldset>
+    </form>
+</div>

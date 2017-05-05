@@ -1,0 +1,24 @@
+
+<div class="field choice checkbox-group" data-bind="">
+    <input type="checkbox" class="checkbox" id="shipping-require-invoice-fields" data-bind="checked: requireInvoice" />
+    <label class="label label--checkbox require-invoice-checkbox" for="shipping-require-invoice-fields">
+        <span class="check"></span>
+        <span class="box-check"></span>
+        <strong data-bind="i18n: 'Need an invoice'"></strong>
+    </label>
+</div>
+<!-- ko if: requireInvoice -->
+    <!-- ko template: 'Pengo_Addressmx/invoicing-data/details' --><!-- /ko -->
+    <fieldset class="fieldset" data-bind="visible: !isAddressDetailsVisible()">
+        <!-- ko template: 'Pengo_Addressmx/invoicing-data/form' --><!-- /ko -->
+        <div class="actions">
+            <button class="action action-cancel osc-edit-button" type="button" data-bind="click: cancelAddressEdit">
+                <span data-bind="i18n: 'Cancel'"></span>
+            </button>
+            <button class="action action-update osc-ok-button update-address-button" type="button" data-bind="click: updateAddress">
+                <span data-bind="i18n: 'Update'"></span>
+            </button>
+        </div>
+    </fieldset>
+<!--/ko-->
+

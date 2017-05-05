@@ -1,0 +1,34 @@
+Postcode,Postcode
+"Create New Postcode","Create New Postcode"
+"You saved the address.","Se ha guardado la dirección."
+"We can't save the address.","No podemos guardar la dirección."
+"Object with id ""%1"" does not exist.","Object with id ""%1"" does not exist."
+Edit,Cambiar
+Delete,Borrar
+"Delete ""${ $.$data.name }""","Delete ""${ $.$data.name }"""
+"Are you sure you wan't to delete the Post ""${ $.$data.name }"" ?","Are you sure you wan't to delete the Post ""${ $.$data.name }"" ?"
+"* Required Fields","* Campo obligatorio"
+"Contact Information","Mis datos"
+"Phone Number",Telefóno
+Address,Dirección
+Country,País
+"Street Address",Dirección
+"Zip/Postal Code","Código Postal"
+"Zip/Postal seems to be wrong.","Zip/Postal seems to be wrong."
+State/Province,Estado/Provincia
+City,Ciudad
+"VAT Number","RFC/Número VAT"
+"This is your default billing address.","Este es la dirección de facturación predeterminada."
+"Use as my default billing address","Usar como mi direccióm de facturación"
+"This is your default shipping address.","Este es la dirección de envío predeterminada."
+"Use as my default shipping address","Usar como mi dirección de envío"
+"Save Address","Guardar cambios"
+"Go back",Regresar
+Neighborhood,Neighborhood
+"Please select a neighborhood","Please select a neighborhood"
+"Invoicing Data","Datos de facturación"
+"Need an invoice","Necesito factura"
+Colonia,Colonia
+Municipio,Municipio
+Ciudad,Ciudad
+Estado,Estado

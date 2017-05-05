@@ -1,0 +1,17 @@
+<!--
+  ~ /**
+  ~  Copyright © 2016 Magestore. All rights reserved.
+  ~  See COPYING.txt for license details.
+  ~  */
+  -->
+<li id="shipping" class="checkout-invoicing-data invoicing_data" data-bind="">
+    <h3 class="step-title step_2" id="invoicing_step_header" data-bind="i18n: 'Invoicing Data'" data-role="title"></h3>
+    <div class="clear"></div>
+    <div id="checkout-step-invoicing-data"
+         class="step-content"
+         data-role="content">
+        <!-- ko foreach: getRegion('invoicing-data') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+    </div>
+</li>

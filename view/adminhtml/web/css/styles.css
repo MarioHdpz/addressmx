@@ -1,0 +1,39 @@
+.admin__menu .item-pengo-menu-main > a:before {
+	content: url('../images/pengo.png') !important;
+	font-size: 2.4rem!important;
+	position: relative!important;
+	top: -0.2rem!important;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+	font-weight: 700;
+	background-color: #e3e3e3;
+	display: inline-block;
+	padding: 0.5em 2em;
+	cursor: pointer;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+	background-color: #adadad;
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label * {
+	pointer-events: none;
+}
+
+.inputfile + label.selected {
+	background-color: #514943;
+	color: #fff;
+}

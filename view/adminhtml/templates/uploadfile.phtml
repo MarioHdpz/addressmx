@@ -1,0 +1,47 @@
+<form method="POST" action="<?php echo $this->getUrl('addressmx/grid/index'); ?>" enctype="multipart/form-data" onsubmit="return upload();">
+	<input type="hidden" name="form_key" value="<?php echo $this->getFormKey();?>">
+	<input type="file" name="file" id="file" class="action-default inputfile" data-multiple-caption="{count} archivo(s) seleccionado(s)">
+	<label for="file" id="fileName">Seleccionar archivo</label>
+	<input type="submit" name="enviar" value="Actualizar" class="action-primary submit">
+</form>
+<script type="text/javascript">
+var inputs = document.querySelectorAll('.inputfile');
+Array.prototype.forEach.call(inputs, function(input)
+{
+	var label	 = input.nextElementSibling,
+		labelVal = label.innerHTML;
+
+	input.addEventListener('change', function(e)
+	{
+		var fileName = '';
+		if(this.files && this.files.length > 1) {
+			fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+		}
+		else {
+			fileName = e.target.value.split('\\').pop();
+		}
+		
+		if(fileExtension(fileName) == 'xls' || fileExtension(fileName) == 'xlsx') {
+			label.innerHTML = fileName;
+			label.classList.add('selected');
+		} else {
+			label.innerHTML = 'Seleccionar archivo';
+			label.classList.remove('selected');
+		}
+	});
+});
+
+
+function upload() {
+	var label = document.querySelector('#fileName');
+	if(label.classList.contains('selected')) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function fileExtension(fileName) {
+	return (/[.]/.exec(fileName)) ? /[^.]+$/.exec(fileName) : undefined;
+}
+</script>

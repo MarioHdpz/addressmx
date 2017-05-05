@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <body>
+        <referenceBlock name="menu">
+            <action method="setActive">
+                <argument name="itemId" xsi:type="string">Pengo_Addressmx::postcode</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="page.title">
+            <action method="setTitleClass">
+                <argument name="class" xsi:type="string">complex</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content" as="grid">
+            <uiComponent name="pengo_addressmx_postcode_listing"/>
+        </referenceContainer>
+        <referenceBlock name="content" before="grid">
+            <block template="uploadfile.phtml" class="Pengo\Addressmx\Block\Adminhtml\Main" name="pengo_address_block_main"/>
+        </referenceBlock>
+    </body>
+</page>

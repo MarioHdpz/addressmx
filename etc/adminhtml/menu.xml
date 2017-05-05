@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+		<add id="Pengo_Addressmx::pengo_menu_addressmx"
+		title="AddressMx"
+		module="Pengo_Addressmx"
+		sortOrder="9999"
+		resource="Pengo_Addressmx::pengo_menu_addressmx"
+		parent="Pengo_Backend::pengo_menu"
+		/>
+		<add id="Pengo_Addressmx::pengo_menu_addressmx_postcodes"
+		title="Postcodes"
+		module="Pengo_Addressmx"
+		sortOrder="9999"
+		resource="Pengo_Addressmx::pengo_menu_addressmx_postcodes"
+		parent="Pengo_Addressmx::pengo_menu_addressmx"
+		action="addressmx/grid/index"
+		/>
+    </menu>
+</config>

@@ -68,18 +68,20 @@ class InstallData implements InstallDataInterface
 		$eavSetup->addAttribute(
 				'customer_address', 'neighborhood_id',
 				[
+					'type' => 'int',
 					'label' => 'Neighborhood',
 					'input' => 'select',
-					'required' => 0,
+					'required' => 1,
 					'default' => '',
 					'sort_order' => 76,
 					'system' => false,
 					'user_defined' => 1,
+					'source' => 'Magento\Eav\Model\Entity\Attribute\Source\Table',
 					'option' =>
 		        array (
 		            'values' =>
 		                array (
-		                    0 => 'Please select a Neighborhood',
+		                    0 => 'Please select a Neighborhood'
 		                ),
 		        )
 				]
@@ -153,7 +155,7 @@ class InstallData implements InstallDataInterface
 				[
 					'label' => 'City Id',
 					'input' => 'text',
-					'required' => 0,
+					'required' => 1,
 					'default' => '',
 					'sort_order' => 200,
 					'system' => false,
@@ -166,25 +168,25 @@ class InstallData implements InstallDataInterface
 			['adminhtml_customer_address', 'customer_address_edit', 'customer_register_address','customer_address']
 		);
 		$attribute->save();
-		
-		$eavSetup->addAttribute(
-				'customer_address', 'require_invoice',
-				[
-					'label' => 'Require Invoice',
-					'input' => 'boolean',
-					'required' => 0,
-					'default' => '',
-					'sort_order' => 200,
-					'system' => false,
-					'user_defined' => 1
-				]
-		);
-		$attribute = $eavSetup->getEavConfig()->getAttribute('customer_address', 'require_invoice');
-		$attribute->setData(
-			'used_in_forms',
-			['adminhtml_customer_address', 'customer_address_edit', 'customer_register_address','customer_address']
-		);
-		$attribute->save();
+
+        $eavSetup->addAttribute(
+            'customer_address', 'region_code',
+            [
+                'label' => 'Region Code',
+                'input' => 'text',
+                'required' => 1,
+                'default' => '',
+                'sort_order' => 200,
+                'system' => false,
+                'user_defined' => 1
+            ]
+        );
+        $attribute = $eavSetup->getEavConfig()->getAttribute('customer_address', 'region_code');
+        $attribute->setData(
+            'used_in_forms',
+            ['adminhtml_customer_address', 'customer_address_edit', 'customer_register_address','customer_address']
+        );
+        $attribute->save();
 		
 		$eavSetup->updateAttribute(
 			'customer_address',
